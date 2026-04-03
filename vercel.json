@@ -1,0 +1,17 @@
+{
+  "buildCommand": "cd client && npm install && npm run build",
+  "outputDirectory": "client/dist",
+  "framework": null,
+  "functions": {
+    "api/invoice/pdf.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/api/invoice/pdf", "destination": "/api/invoice/pdf" },
+    { "source": "/api/invoice/csv", "destination": "/api/invoice/csv" },
+    { "source": "/api/health", "destination": "/api/health" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

@@ -4,7 +4,7 @@ import puppeteer from 'puppeteer';
 import { buildInvoiceHTML } from './template.js';
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json({ limit: '5mb' }));
